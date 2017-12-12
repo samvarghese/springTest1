@@ -1,0 +1,45 @@
+# DataSource settings: set here your own configurations for the database 
+# connection. In this example we have "netgloo_blog" as database name and 
+# "root" as username and password.
+spring.datasource.url = jdbc:mysql://localhost:3306/user_db
+spring.datasource.username = javausr
+spring.datasource.password= apb%c8p_D
+spring.datasource.useSSL= false
+
+# Keep the connection alive if idle for a long time (needed in production)
+spring.datasource.testWhileIdle = true
+spring.datasource.validationQuery = SELECT 1
+
+# Show or not log for each sql query
+spring.jpa.show-sql = true
+
+# Hibernate ddl auto (create, create-drop, update)
+spring.jpa.hibernate.ddl-auto = update
+#spring.jpa.generate-ddl=true
+
+# Naming strategy
+spring.jpa.hibernate.naming-strategy = org.hibernate.cfg.ImprovedNamingStrategy
+spring.jpa.properties.hibernate.current_session_context_class=org.springframework.orm.hibernate4.SpringSessionContext
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+
+# Spring Data base URL
+spring.data.rest.basePath=/api
+
+# jmx endpoints settings
+endpoints.jmx.unique-names=true
+
+# Admin Base URL ???
+#loan.base.url = http://localhost:8080/admin
+
+# Server Base URL
+server.contextPath=/admin
+
+# Server port
+#server.port = 8090
+
+# Multipart File properties
+#spring.http.multipart.location=/files
+spring.http.multipart.max-file-size=1024KB
+spring.http.multipart.max-request-size=1024KB
